@@ -1,0 +1,27 @@
+[
+  {
+    "id": "awwwards-editorial-case-study",
+    "name": "Kinfolk Lifestyle Magazine",
+    "industry": "Publishing / Lifestyle",
+    "url": "https://kinfolk.com/",
+    "observed_patterns": {
+      "headline_ratio": "4.5x headline to body",
+      "measure": "58 characters per line",
+      "whitespace": "Expansive macro-padding (120px desktop)",
+      "motion": "Restrained 160ms ease-out transitions, zero decorative scroll hijacking"
+    },
+    "key_takeaway": "Restraint and scale contrast create luxury feel without heavy font weights."
+  },
+  {
+    "id": "godly-tech-case-study",
+    "name": "Linear App",
+    "industry": "SaaS / Developer Tool",
+    "url": "https://linear.app/",
+    "observed_patterns": {
+      "keyboard_motion": "0ms instant response on command bar",
+      "cards": "Subtle borders (1px solid var(--border)), no heavy drop shadows",
+      "visuals": "Real interactive UI mockups, zero stock photos"
+    },
+    "key_takeaway": "Speed and precision aesthetic achieved via instant power interactions and dark slate neutrality."
+  }
+]

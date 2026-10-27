@@ -1,0 +1,130 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-10-27",
+  "libraries": [
+    {
+      "id": "shadcn-ui",
+      "name": "shadcn/ui",
+      "type": "component_library",
+      "website_url": "https://ui.shadcn.com/",
+      "docs_url": "https://ui.shadcn.com/docs",
+      "mcp_server": "npx -y shadcn@latest mcp",
+      "registry_type": "official",
+      "access_type": "free",
+      "license": "MIT",
+      "primary_use": "Accessible UI primitives, forms, dialogs, tables, dashboards, base design system"
+    },
+    {
+      "id": "aceternity-ui",
+      "name": "Aceternity UI",
+      "type": "creative_components",
+      "website_url": "https://ui.aceternity.com/",
+      "docs_url": "https://ui.aceternity.com/ai-recommendations",
+      "registry_url": "https://ui.aceternity.com/registry/{name}.json",
+      "access_type": "freemium",
+      "license": "MIT (free components)",
+      "primary_use": "Hero sections, 3D cards, sticky scroll reveal, parallax, animated backgrounds, liquid glass"
+    },
+    {
+      "id": "magic-ui",
+      "name": "Magic UI",
+      "type": "animated_components",
+      "website_url": "https://magicui.design/",
+      "docs_url": "https://magicui.design/docs",
+      "mcp_server": "npx -y @magicuidesign/mcp@latest",
+      "registry_url": "https://magicui.design/r/{name}.json",
+      "access_type": "freemium",
+      "license": "MIT (free components)",
+      "primary_use": "Animated marketing components, text effects, marquee, particle backgrounds, interactive landing elements"
+    },
+    {
+      "id": "react-bits",
+      "name": "React Bits",
+      "type": "creative_interactions",
+      "website_url": "https://reactbits.dev/",
+      "github_url": "https://github.com/DavidHDev/react-bits",
+      "registry_url": "https://reactbits.dev/r/{name}.json",
+      "access_type": "free",
+      "license": "MIT",
+      "primary_use": "Text animations, creative backgrounds, interactive cursor, WebGL shaders, visual interactions"
+    },
+    {
+      "id": "motion-primitives",
+      "name": "Motion Primitives",
+      "type": "micro_interactions",
+      "website_url": "https://motion-primitives.com/",
+      "registry_url": "https://motion-primitives.com/c/{name}.json",
+      "access_type": "free",
+      "license": "MIT",
+      "primary_use": "Fluid layout morphs, component transitions, gesture cards, animated accordions, popovers"
+    },
+    {
+      "id": "gsap",
+      "name": "GSAP (GreenSock)",
+      "type": "motion_engine",
+      "website_url": "https://gsap.com/",
+      "docs_url": "https://gsap.com/docs/",
+      "demos_url": "https://gsap.com/demos/",
+      "access_type": "free",
+      "license": "Webflow Free License (all plugins 100% free)",
+      "primary_use": "Timelines, ScrollTrigger, SplitText, Flip, pinned scrollytelling, horizontal scroll, SVG morph"
+    },
+    {
+      "id": "motion",
+      "name": "Motion (Framer Motion)",
+      "type": "react_motion",
+      "website_url": "https://motion.dev/",
+      "docs_url": "https://motion.dev/docs",
+      "access_type": "free",
+      "license": "MIT",
+      "primary_use": "Declarative component transitions, springs, AnimatePresence, shared element layouts, gestures"
+    },
+    {
+      "id": "codrops",
+      "name": "Codrops (Tympanus)",
+      "type": "creative_inspiration",
+      "website_url": "https://tympanus.net/codrops/",
+      "demos_url": "https://tympanus.net/codrops/demos/",
+      "access_type": "free",
+      "license": "MIT / Creative Commons (open source demos)",
+      "primary_use": "Experimental website interactions, WebGL shaders, camera transitions, creative page transitions"
+    },
+    {
+      "id": "three-js",
+      "name": "Three.js / React Three Fiber",
+      "type": "webgl_3d",
+      "website_url": "https://threejs.org/",
+      "r3f_url": "https://r3f.docs.pmnd.rs/",
+      "access_type": "free",
+      "license": "MIT",
+      "primary_use": "Interactive 3D scenes, camera animations, 3D product configurations, custom shaders"
+    }
+  ],
+  "design_inspiration_sources": [
+    {
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "scope": "Site of the Day, cutting-edge art direction and scrollytelling"
+    },
+    {
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "scope": "Curated modern web design, animation, and typography"
+    },
+    {
+      "name": "Siteinspire",
+      "url": "https://www.siteinspire.com/",
+      "scope": "Editorial layouts, typography, architecture, portfolio sites"
+    },
+    {
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "scope": "Product landing pages, SaaS, e-commerce"
+    },
+    {
+      "name": "Lapa Ninja",
+      "url": "https://www.lapa.ninja/",
+      "scope": "Commercial landing pages by industry and conversion structure"
+    }
+  ]
+}

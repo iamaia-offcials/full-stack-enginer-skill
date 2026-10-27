@@ -42,5 +42,6 @@ Canonical rules and stable IDs live in `references/`. Numbers provide navigation
 - [SEO and analytics](guides/SEO-ANALYTICS-PLANNING.md)
 - [Living documentation](guides/LIVING-DOCUMENTATION.md)
 - [Contextual motion decisions](guides/MOTION-DECISIONS.md)
+- [Design excellence and hardening](guides/DESIGN-EXCELLENCE-AND-HARDENING.md)
 - [UX research and selective reference atlas](guides/UX-REFERENCE-RESEARCH.md)
 - [Primary sources](EXTERNAL_SOURCES.md)

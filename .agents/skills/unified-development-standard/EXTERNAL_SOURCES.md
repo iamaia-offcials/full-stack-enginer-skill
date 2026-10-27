@@ -45,4 +45,18 @@ Minimal/Standard/Critical profiles, a single deployment owner per target, and th
 | Apple performance | https://developer.apple.com/documentation/xcode/improving-your-app-s-performance | Profiling and measurement |
 | GitHub dependencies | https://docs.github.com/en/code-security/dependabot | Updates and security alerts |
 
+## Design excellence, interface hardening, and motion sources
+
+| Topic | Source | Scope and verified integration |
+|---|---|---|
+| Frontend Design (Anthropic) | https://skills.sh/anthropics/skills/frontend-design | Subject-grounded design, distinctive identity, avoiding unconsidered AI tells (accents, ordinals, pill tags) |
+| Impeccable (Paul Bakaus) | https://github.com/pbakaus/impeccable | Interface hardening: mobile 16px input zoom floor, `min-width: 0` overflow protection, accessible submit states, hover parity |
+| UI UX Pro Max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | Design style selection, typography scales, palette formulas, and UX heuristics |
+| Web Interface Guidelines (Vercel) | https://skills.sh/vercel-labs/agent-skills/web-design-guidelines | Web interface quality rules: viewport zoom preservation (WCAG 1.4.4), focus visibility, layout shift prevention |
+| Taste Skill (Leonxlnx) | https://github.com/Leonxlnx/taste-skill | Optical typography (45–75 char measure, tight display tracking), scale contrast (4x+ ratio), anti-slop review |
+| GSAP Skills (GreenSock) | https://github.com/greensock/gsap-skills | GSAP 3 architecture, `useGSAP()`, timeline placement, free plugin licensing. Corrects external `refreshPriority` typo (higher numbers refresh first) |
+| Motion Design (LottieFiles) | https://github.com/LottieFiles/motion-design-skill | Purposeful motion hierarchy, emotion mapping, choreography, context-adapted timing |
+| UI Animation (mblode) | https://skills.sh/mblode/agent-skills/ui-animation | Spring physics (Apple damping/response model), touch velocity handoff, gesture interruptibility, video motion analysis |
+| Animate & Motion Audit (Emil Kowalski) | https://skills.sh/emilkowalski/skills/animate | Frequency-to-motion matrix (100+/day zero-motion rule), directional easing (`ease-out` on entrances), symptom diagnostics |
+
 These URLs are starting points. Recheck relevant versions and behavior before a concrete code change.

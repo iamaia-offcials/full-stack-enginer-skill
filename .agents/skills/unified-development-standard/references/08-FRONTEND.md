@@ -10,6 +10,8 @@
 - `[FE-008] SHOULD` Avoid uncontrolled effects, listeners, and duplicate subscriptions. Cancel/clean up resources and prevent asynchronous fetch races.
 - `[FE-009] SHOULD` Choose SSR/SSG/CSR based on need, SEO, personal data, and latency. Do not default to an entirely client-rendered application without analysis.
 - `[FE-010] MUST` Review payload/JavaScript size, images, rendering, and routes before performance-sensitive changes.
+- `[FE-011] MUST` Protect layout resilience: set `min-width: 0` (or `min-height: 0` in vertical flex) on flex and grid items containing dynamic text, titles, or code with `overflow-wrap: anywhere` to prevent container blowout on long strings; provide space budgets for i18n expansion.
+- `[FE-012] MUST` Ensure operable action affordances: never conceal primary interactive actions exclusively behind pointer `:hover` states without accessible touch and keyboard alternatives; do not disable submit buttons during submission in ways that strip keyboard focus or trap users—use accessible busy states (`aria-busy="true"`, spinners).
 
 ## Composition principle
 `Page → layout + feature components → shared UI primitives`. `features/catalog/` can own catalog state; `components/ui/` knows nothing about pricing plans or orders.

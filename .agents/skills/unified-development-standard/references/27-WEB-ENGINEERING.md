@@ -14,6 +14,9 @@
 - `[WEB-010] MUST` Before release, verify the production build and smoke critical flows at mobile and desktop widths. State the browsers actually tested.
 - `[WEB-011] SHOULD` Use shared UI primitives for important components. Variants express meaning rather than dozens of independent boolean switches.
 - `[WEB-012] SHOULD` For unreliable networks, use abort/timeouts/bounded retries and explicit recoverable states instead of endless spinners or uncontrolled polling.
+- `[WEB-013] MUST` Enforce mobile input scale floor: set font-size on mobile inputs (`input`, `select`, `textarea`) to at least 16px to prevent mobile Safari from auto-zooming and disrupting viewport layout.
+- `[WEB-014] MUST` Preserve viewport scaling: never set `user-scalable=no` or `maximum-scale=1.0` in viewport metadata (violates WCAG 1.4.4); verify interface reflows under 200% zoom without loss of operability.
+- `[WEB-015] MUST` Sanitize error presentation: map backend errors and status codes to concise, actionable user microcopy; never leak raw stack traces, database schema details, or unhandled runtime exceptions into public UI.
 
 ## Notes
 - Responsive design uses structure, components, states, and checks appropriate to available space; it does not imply a separate mobile-browser project.

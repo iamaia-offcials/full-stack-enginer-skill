@@ -1,0 +1,174 @@
+[
+  {
+    "id": "aceternity-sticky-scroll-reveal",
+    "name": "Sticky Scroll Reveal",
+    "category": "Interactive Sections",
+    "source": "Aceternity UI",
+    "documentation_url": "https://ui.aceternity.com/components/sticky-scroll-reveal",
+    "demo_url": "https://ui.aceternity.com/components/sticky-scroll-reveal",
+    "source_code_url": "https://ui.aceternity.com/registry/sticky-scroll-reveal.json",
+    "license": "MIT",
+    "access_type": "free",
+    "description": "Sticky viewport canvas where descriptive text blocks scroll past while the associated visual/illustration card smoothly transitions and updates in place.",
+    "visual_characteristics": "Clean 50/50 split layout, fixed visual card with rounded corners, smooth gradient background transitions.",
+    "interaction_behavior": "Natural document scroll triggers card transitions based on active content index in viewport.",
+    "suitable_use_cases": [
+      "Multi-feature product walkthrough",
+      "SaaS capabilities overview",
+      "Step-by-step workflow explanation"
+    ],
+    "unsuitable_use_cases": [
+      "Simple single-action landing pages",
+      "Dense data tables",
+      "Fast scanning mobile views without height"
+    ],
+    "technology": "React / Next.js, Tailwind CSS, Motion",
+    "dependencies": [
+      "motion",
+      "clsx",
+      "tailwind-merge"
+    ],
+    "implementation_complexity": "medium",
+    "performance_considerations": "Optimized composite opacity and transform transitions; lightweight DOM footprint.",
+    "accessibility_considerations": "Screen readers read semantic content order naturally; respects prefers-reduced-motion.",
+    "desktop_behavior": "Sticky 50/50 two-column canvas.",
+    "mobile_behavior": "Unpins into a natural sequential single-column feed with image above text.",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "aceternity-3d-card-effect",
+    "name": "3D Card Effect",
+    "category": "Cards",
+    "source": "Aceternity UI",
+    "documentation_url": "https://ui.aceternity.com/components/3d-card-effect",
+    "demo_url": "https://ui.aceternity.com/components/3d-card-effect",
+    "source_code_url": "https://ui.aceternity.com/registry/3d-card.json",
+    "license": "MIT",
+    "access_type": "free",
+    "description": "Interactive card that responds to mouse cursor position with 3D perspective rotation, translating internal elements along the Z-axis for physical depth.",
+    "visual_characteristics": "Smooth perspective tilt, multi-layer depth, subtle border highlight.",
+    "interaction_behavior": "Tracks pointer mousemove inside card bounds; returns smoothly to rest position on mouseleave.",
+    "suitable_use_cases": [
+      "Hero feature cards",
+      "Pricing tier highlight",
+      "Portfolio project showcases"
+    ],
+    "unsuitable_use_cases": [
+      "Dense tabular rows",
+      "Mobile touch cards with no cursor hover"
+    ],
+    "technology": "React, Tailwind CSS",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "implementation_complexity": "low",
+    "performance_considerations": "Uses CSS translate3d and transform without re-rendering layout.",
+    "accessibility_considerations": "Card remains fully keyboard focusable; tilt effect is decorative and inert for screen readers.",
+    "desktop_behavior": "Interactive 3D pointer tilt.",
+    "mobile_behavior": "Renders as static clean card with zero touch overhead.",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "magicui-marquee",
+    "name": "Marquee",
+    "category": "Social Proof",
+    "source": "Magic UI",
+    "documentation_url": "https://magicui.design/docs/components/marquee",
+    "demo_url": "https://magicui.design/docs/components/marquee",
+    "source_code_url": "https://magicui.design/r/marquee.json",
+    "license": "MIT",
+    "access_type": "free",
+    "description": "Smooth, infinitely scrolling horizontal marquee for logos, testimonials, or tickers with pause-on-hover capability and edge gradient masks.",
+    "visual_characteristics": "Seamless horizontal loop, customizable speed, elegant fade-out masks on left and right edges.",
+    "interaction_behavior": "Continuous auto-scroll; pauses when user hovers or focuses with keyboard.",
+    "suitable_use_cases": [
+      "Partner and client logo walls",
+      "Customer review ticker",
+      "Cryptocurrency or stock market badges"
+    ],
+    "unsuitable_use_cases": [
+      "Critical text that must be read immediately",
+      "Legal disclosures"
+    ],
+    "technology": "React, Tailwind CSS, pure CSS animation",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "implementation_complexity": "low",
+    "performance_considerations": "Driven by pure CSS `transform: translateX()`; zero JavaScript execution cost during scroll.",
+    "accessibility_considerations": "Supports WCAG 2.2.2 pause-on-hover/focus; pauses completely under prefers-reduced-motion.",
+    "desktop_behavior": "Smooth multi-item marquee with pause-on-hover.",
+    "mobile_behavior": "Touch-scrollable or reduced-speed continuous marquee.",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "react-bits-blur-text",
+    "name": "Blur Text",
+    "category": "Text Animations",
+    "source": "React Bits",
+    "documentation_url": "https://reactbits.dev/text-animations/blur-text",
+    "demo_url": "https://reactbits.dev/text-animations/blur-text",
+    "source_code_url": "https://reactbits.dev/r/BlurText-TS-TW.json",
+    "license": "MIT",
+    "access_type": "free",
+    "description": "Staggered text entrance where individual words or characters animate from a soft blur into crisp focus with subtle vertical translation.",
+    "visual_characteristics": "Sophisticated typographic entrance, smooth optical de-blurring.",
+    "interaction_behavior": "Triggers on section entrance or scroll viewport entry.",
+    "suitable_use_cases": [
+      "Hero headline reveals",
+      "Section title emphasis",
+      "Brand statement pages"
+    ],
+    "unsuitable_use_cases": [
+      "Body paragraph text",
+      "High-frequency dashboard titles"
+    ],
+    "technology": "React, Tailwind CSS, Motion",
+    "dependencies": [
+      "motion"
+    ],
+    "implementation_complexity": "low",
+    "performance_considerations": "Blur filter cost is localized to text entrance and cleans up immediately upon landing.",
+    "accessibility_considerations": "Text content remains semantically intact in DOM for screen readers and search crawlers.",
+    "desktop_behavior": "Staggered word/char entrance.",
+    "mobile_behavior": "Faster duration or instant text under prefers-reduced-motion.",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "shadcn-dialog-accessible",
+    "name": "Accessible Dialog Modal",
+    "category": "Dialogs",
+    "source": "shadcn/ui",
+    "documentation_url": "https://ui.shadcn.com/docs/components/dialog",
+    "demo_url": "https://ui.shadcn.com/docs/components/dialog",
+    "source_code_url": "npx shadcn@latest add dialog",
+    "license": "MIT",
+    "access_type": "free",
+    "description": "Production-grade accessible modal dialog built on Radix UI primitives with focus trapping, escape-key dismissal, background lock, and smooth fade/scale transitions.",
+    "visual_characteristics": "Subtle backdrop overlay, centered card with clean border and accessible close button.",
+    "interaction_behavior": "Trap focus inside dialog; restore focus to triggering element upon dismissal.",
+    "suitable_use_cases": [
+      "Confirmation dialogs",
+      "Lead capture forms",
+      "Detail popups",
+      "Auth screens"
+    ],
+    "unsuitable_use_cases": [
+      "Full page navigation",
+      "Mobile bottom sheets (use drawer instead)"
+    ],
+    "technology": "React, Radix UI Primitives, Tailwind CSS",
+    "dependencies": [
+      "@radix-ui/react-dialog",
+      "lucide-react"
+    ],
+    "implementation_complexity": "low",
+    "performance_considerations": "Unmounts from DOM when closed; portal-rendered outside root overflow.",
+    "accessibility_considerations": "Full WAI-ARIA Dialog modal conformance, auto-focuses first input, locks body scroll.",
+    "desktop_behavior": "Centered floating modal dialog.",
+    "mobile_behavior": "Full-width adaptive dialog or bottom drawer conversion.",
+    "verified_at": "2026-10-27"
+  }
+]

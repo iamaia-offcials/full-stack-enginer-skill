@@ -1,0 +1,37 @@
+[
+  {
+    "id": "gsap-pinned-horizontal-showcase",
+    "name": "Pinned Horizontal Reel",
+    "category": "Scroll Animations",
+    "source": "GSAP ScrollTrigger",
+    "documentation_url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/",
+    "demo_url": "https://gsap.com/demos/",
+    "license": "Free",
+    "description": "Vertical scroll position scrubs a full-width horizontal track containing large project cards or product steps.",
+    "implementation_pattern": "Pin container while animating `xPercent: -100 * (panels - 1)` with `scrub: 1`.",
+    "suitable_use_cases": [
+      "Portfolio case studies",
+      "Product creation timeline",
+      "Real estate room showcase"
+    ],
+    "mobile_adaptation": "Unpin via `ScrollTrigger.matchMedia` below 768px; render as natural vertical stack.",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "motion-spring-drawer",
+    "name": "Velocity-Projected Bottom Drawer",
+    "category": "Gestures",
+    "source": "Motion (Framer Motion)",
+    "documentation_url": "https://motion.dev/docs/gestures",
+    "license": "MIT",
+    "description": "Mobile-native bottom sheet that tracks touch drag 1:1 and projects drag velocity into momentum settling or dismissal.",
+    "implementation_pattern": "Use `drag=\"y\"`, `dragConstraints={{ top: 0 }}`, and analyze `info.velocity.y` in `onDragEnd`.",
+    "suitable_use_cases": [
+      "Mobile filters",
+      "Action sheets",
+      "Cart summary on mobile"
+    ],
+    "mobile_adaptation": "Native touch gestures with safe area bottom padding.",
+    "verified_at": "2026-10-27"
+  }
+]

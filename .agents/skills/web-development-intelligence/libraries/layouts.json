@@ -1,0 +1,26 @@
+[
+  {
+    "id": "editorial-hero-asymmetric",
+    "name": "Editorial Asymmetric Hero",
+    "category": "Hero",
+    "characteristics": "Huge serif headline (72px+), tight tracking (-0.02em), off-center 65/35 grid, negative space.",
+    "suitable_industries": [
+      "Architecture",
+      "Luxury Goods",
+      "Fine Dining",
+      "Design Agency"
+    ]
+  },
+  {
+    "id": "interactive-split-calculator-hero",
+    "name": "Interactive Split Calculator Hero",
+    "category": "Hero",
+    "characteristics": "Left column value proposition with trust metrics; right column live interactive selector/calculator.",
+    "suitable_industries": [
+      "eSIM",
+      "Fintech",
+      "Car Rental",
+      "Solar Installation"
+    ]
+  }
+]

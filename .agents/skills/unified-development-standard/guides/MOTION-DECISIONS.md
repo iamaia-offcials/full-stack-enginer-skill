@@ -79,6 +79,94 @@ Illustrative semantic tokens, to adapt rather than install globally:
 
 This assumes an existing semantic button and focus treatment. It does not prescribe timings or scale for every product. Reduced motion changes behavior, not just duration to 1 ms; keep state and information even if transition events no longer fire.
 
+## Frequency-to-motion decision matrix
+
+User interaction frequency dictates animation duration and whether motion should exist at all:
+
+| Interaction frequency | Motion decision | Target duration | Practical examples |
+|---|---|---|---|
+| **100+ times/day** (Power actions) | **Zero animation (0ms)** | Instant | Keyboard shortcuts, command palettes (e.g. Raycast/Spotlight), quick tab switches, autocomplete selection. Animation here breeds friction. |
+| **Tens of times/day** (Routine navigation) | **Micro-motion** or instant | 100–150ms | Primary menu disclosure, list item selection, standard button clicks, hover feedback. |
+| **Occasional** (Contextual transitions) | **Standard transition** | 150–250ms | Modal dialogs, filter bottom sheets, side drawers, toast alerts, expanding accordions. |
+| **Rare / First-time** (Narrative moments) | **Authored choreography** | 300–600ms | Onboarding flows, milestone celebrations, order completion, marketing hero reveals. |
+
+## Directional easing hierarchy
+
+- **Entrances and exits:** Use decelerating **`ease-out`** (e.g. `cubic-bezier(0.16, 1, 0.3, 1)` or standard `ease-out`). Motion starts immediately upon trigger with maximum speed and gently lands into place. **Never use `ease-in` on entrances**, as it creates noticeable lag before any visual feedback registers.
+- **On-screen movements and morphs:** Use **`ease-in-out`** (e.g. `cubic-bezier(0.65, 0, 0.35, 1)`). The element starts at rest, accelerates through travel, and decelerates into its new container or geometry.
+- **Color, background, and hover transitions:** Use standard **`ease`** or `cubic-bezier(0.25, 0.1, 0.25, 1)`.
+- **Continuous linear motion:** Use **`linear`** exclusively for constant indicators (determinate progress rings, marquees, steady rotations).
+
+## Spring physics and gesture momentum
+
+Use springs for physical manipulation, touch dragging, swipe-to-dismiss, and interruptible state changes.
+
+- **Apple response/damping model:**
+  - `response` (seconds): controls speed/stiffness (e.g. `0.3s` for snappy feedback, `0.5s` for sheets).
+  - `dampingRatio` (ζ): `1.0` is critically damped (fastest arrival with zero bounce); `0.7–0.8` is near-critically damped (smooth organic settling without cartoonish bounce); `< 0.6` is underdamped (bouncy; avoid on productive tools).
+- **Physical handoff:** When releasing a drag gesture, inject the pointer's velocity vector directly into the spring's initial velocity rather than dropping the element from rest.
+- **Interruptibility:** Springs naturally retarget mid-flight because their acceleration is proportional to the remaining distance; no transition cancellation jerk occurs.
+
+## GSAP architecture and verified patterns
+
+When the project uses GSAP (GreenSock):
+
+1. **Licensing and installation:** GSAP is completely free, including all plugins (SplitText, MorphSVG, Flip, Observer, ScrollSmoother, DrawSVG). Import directly from `gsap`:
+   ```bash
+   npm install gsap @gsap/react
+   ```
+2. **Plugin registration:** Always register plugins once before calling any tween or hook:
+   ```javascript
+   import gsap from "gsap";
+   import { ScrollTrigger } from "gsap/ScrollTrigger";
+   import { Flip } from "gsap/Flip";
+   gsap.registerPlugin(ScrollTrigger, Flip);
+   ```
+3. **React and Next.js integration:** Use `useGSAP()` from `@gsap/react` instead of `useEffect`. It scopes selector lookups to the container and automatically cleans up animations on unmount:
+   ```javascript
+   import { useRef } from "react";
+   import { useGSAP } from "@gsap/react";
+
+   export function AnimatedCard() {
+     const container = useRef(null);
+     useGSAP(() => {
+       gsap.from(".card-item", { opacity: 0, y: 20, stagger: 0.08, ease: "power2.out" });
+     }, { scope: container });
+
+     return <div ref={container}><div className="card-item">Content</div></div>;
+   }
+   ```
+   For user event callbacks (e.g. click/hover handlers), wrap them in `contextSafe()`:
+   ```javascript
+   const { contextSafe } = useGSAP({ scope: container });
+   const onClick = contextSafe(() => {
+     gsap.to(".card-item", { scale: 0.96, yoyo: true, repeat: 1, duration: 0.1 });
+   });
+   ```
+4. **ScrollTrigger rules and verified refresh priority:**
+   - **`refreshPriority`**: In official GSAP, **HIGHER numbers refresh first** (default is 0). Set a higher priority (e.g. `refreshPriority: 1`) on pinned sections or triggers that expand/alter DOM layout above subsequent triggers, so earlier layout shifts calculate before lower triggers measure their scroll positions.
+   - **Properties:** Animate compositor transforms (`xPercent`, `yPercent`, `scale`, `rotation`, `opacity`), not layout properties (`top`, `left`, `width`, `height`, `margin`).
+   - **Dynamic content:** Call `ScrollTrigger.refresh()` after fonts, images, or async components load.
+5. **Timeline placement:** Use semantic position parameters:
+   - `"<"`: align with the start of the immediately preceding tween.
+   - `">"`: align with the end of the immediately preceding tween.
+   - `"<0.1"`: start 0.1s after the start of the previous tween.
+   - `"+=0.2"` / `"-=0.1"`: relative gap or overlap from current timeline end.
+
+## Motion diagnosis and frame symptoms
+
+When an animation feels incorrect or causes user friction, diagnose by symptom:
+
+| Symptom | Root cause | Corrective action |
+|---|---|---|
+| **Sluggish / Heavy** | Entrance uses `ease-in` or duration exceeds 250ms on a small control. | Switch to `ease-out`; reduce duration to 140–180ms. |
+| **Janky / Stuttering** | Animating layout properties (`height`, `width`, `top`, `left`) triggering reflows every frame; or unoptimized `filter: blur()`. | Animate `transform` and `opacity`; use FLIP techniques (`gsap/Flip` or CSS transforms) for layout changes. |
+| **Robotic / Mechanical** | Linear easing applied to spatial translations; missing natural deceleration. | Apply `cubic-bezier(0.16, 1, 0.3, 1)` or near-critically damped spring. |
+| **Jumpy / Teleporting** | Transition interrupted mid-flight while resetting to a hardcoded starting style; or missing exit transition. | Ensure interruption retargets from current rendered value; guard unmount transitions. |
+| **Flickering on Mobile** | Mobile browser URL bar resizing viewport during scroll, or 3D transform without backface isolation. | Set `transform: translateZ(0)` or `backface-visibility: hidden` on animated card; use `svh`/`dvh` viewport units appropriately. |
+
+For custom motion matching from video recordings: sample frames at 60fps/120fps, plot normalized displacement over normalized time, and fit against cubic-bezier control points `(P1x, P1y, P2x, P2y)` or spring damping.
+
 ## Contract and checks
 
 Add only needed fields to the current component/feature documentation: `trigger | purpose | from/to/error/cancel | properties/model/tokens | input/focus | interruption | reduced motion | unsupported-API fallback | evidence`.
