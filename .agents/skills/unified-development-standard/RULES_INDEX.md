@@ -33,6 +33,7 @@ Canonical rules and stable IDs live in `references/`. Numbers provide navigation
 | 26 | [Specialist skill orchestration](references/26-SKILL-ORCHESTRATION.md) |
 | 27 | [Website and web application engineering](references/27-WEB-ENGINEERING.md) |
 | 28 | [Motion design and interaction transitions](references/28-MOTION-DESIGN.md) |
+| 29 | [UX reference research and page architecture](references/29-UX-REFERENCE-RESEARCH.md) |
 
 ## Explanations and examples
 
@@ -41,4 +42,5 @@ Canonical rules and stable IDs live in `references/`. Numbers provide navigation
 - [SEO and analytics](guides/SEO-ANALYTICS-PLANNING.md)
 - [Living documentation](guides/LIVING-DOCUMENTATION.md)
 - [Contextual motion decisions](guides/MOTION-DECISIONS.md)
+- [UX research and selective reference atlas](guides/UX-REFERENCE-RESEARCH.md)
 - [Primary sources](EXTERNAL_SOURCES.md)

@@ -14,6 +14,7 @@ La habilidad principal, `unified-development-standard`, funciona por sí sola. A
 - Restricciones de base de datos, transacciones, índices, migraciones y recuperación.
 - Frontend, estilos mantenibles, accesibilidad e interfaces adaptables sin imponer una identidad visual.
 - Animación de interfaces: selección según el contexto, interrupción e inversión, movimiento reducido, alternativas funcionales y progreso veraz.
+- Referencias UX: 39 estudios suministrados, 12 composiciones condicionales y 27 ejemplos de movimiento con secuencias/GIF, seleccionados según la tarea y el modelo real del negocio.
 - SEO técnico y planificación de analítica/píxeles antes de conectar servicios.
 - Git, CI/CD que tiene en cuenta los costes, contenedores cuando corresponda, versiones y operaciones.
 - Documentación viva: actualizar el documento actual de la funcionalidad y distinguir los planes del historial.
@@ -22,7 +23,9 @@ Patrón de decisión: **condición → decisión → motivo → ejemplo → veri
 
 ## Contexto e idioma
 
-Todas las instrucciones instaladas están en **inglés**. Los agentes deben seguir respondiendo en tu idioma. El punto de entrada dirige a las secciones pertinentes; no exige leer las 29 referencias. Se instala por defecto un núcleo autónomo; los 18 perfiles especializados son opcionales. Las traducciones del README quedan fuera de la habilidad instalada.
+Todas las instrucciones instaladas están en **inglés**. Los agentes deben seguir respondiendo en tu idioma. El punto de entrada dirige a las secciones pertinentes; no exige leer las 30 referencias. Se instala por defecto un núcleo autónomo; los 18 perfiles especializados son opcionales. Las traducciones del README quedan fuera de la habilidad instalada. Las imágenes de movimiento conservan sus textos originales y tienen explicaciones en inglés.
+
+La [guía de referencias](../../.agents/skills/unified-development-standard/guides/UX-REFERENCE-RESEARCH.md) explica la consulta selectiva por CLI y la [galería sin conexión](../../.agents/skills/unified-development-standard/examples/reference-atlas.html). Abre el HTML localmente tras clonar/descargar; GitHub muestra el código fuente. Los diagramas UX son esquemas, no capturas de sitios; las fechas suministradas no indican una verificación nueva. Edita los JSON canónicos y ejecuta `scripts/reference_atlas.py --build-gallery` desde el núcleo para regenerar la galería derivada; `--check-gallery` detecta diferencias.
 
 El inglés puede consumir menos tokens con algunos tokenizadores, pero el ahorro depende del texto y del modelo. La lectura selectiva y la eliminación de duplicaciones también importan. Los [resultados de la revisión](../REVIEW.md) distinguen los tamaños de texto y recuentos de tokens medidos del comportamiento real durante la ejecución.
 

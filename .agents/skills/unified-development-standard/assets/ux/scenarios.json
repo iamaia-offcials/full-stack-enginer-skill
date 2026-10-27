@@ -1,0 +1,270 @@
+[
+  {
+    "title": "Restaurant: reservations",
+    "niche": "restaurants",
+    "model": "information",
+    "job": "Book a table or plan a visit",
+    "alternative_a": [
+      "Address, hours, and booking",
+      "Menu and cuisine format",
+      "Photos of the space",
+      "Conditions and contact details"
+    ],
+    "alternative_b": [
+      "Cuisine concept",
+      "Photos and atmosphere",
+      "Dining formats",
+      "Booking",
+      "Address and hours"
+    ],
+    "why": "An imminent visit calls for practical information. Destination dining can give more room to its story while keeping the main action clear.",
+    "avoid": "Do not create food product cards when online ordering is unavailable.",
+    "id": "UX-S01"
+  },
+  {
+    "title": "Restaurant: delivery",
+    "niche": "restaurants",
+    "model": "catalog",
+    "job": "Order food",
+    "alternative_a": [
+      "Find a location or delivery service",
+      "Dish categories",
+      "Ingredients and options",
+      "Cart",
+      "Payment"
+    ],
+    "alternative_b": [
+      "Popular dishes",
+      "Quick repeat order",
+      "Categories",
+      "Delivery conditions",
+      "Cart"
+    ],
+    "why": "Focus on assortment, price, ingredients, and delivery area.",
+    "avoid": "Do not hide allergens, delivery time, or availability.",
+    "id": "UX-S02"
+  },
+  {
+    "title": "Grocery: physical stores only",
+    "niche": "grocery",
+    "model": "information",
+    "job": "Find a store",
+    "alternative_a": [
+      "Nearest store",
+      "Hours and directions",
+      "Offers",
+      "Products and new arrivals",
+      "Recipes"
+    ],
+    "alternative_b": [
+      "Brand story and products",
+      "Store finder",
+      "Assortment highlights",
+      "Contact details"
+    ],
+    "why": "A product showcase can operate without online sales; the action can offer directions or a shopping list.",
+    "avoid": "Do not add checkout when the store cannot fulfill online orders.",
+    "id": "UX-S03"
+  },
+  {
+    "title": "Grocery: delivery",
+    "niche": "grocery",
+    "model": "catalog",
+    "job": "Build a grocery cart",
+    "alternative_a": [
+      "Delivery address",
+      "Product search",
+      "Categories",
+      "Filters",
+      "Cart"
+    ],
+    "alternative_b": [
+      "Repeat order",
+      "Offers and needed products",
+      "Categories",
+      "Cart"
+    ],
+    "why": "Users need to confirm service area and availability.",
+    "avoid": "Do not promise prices or stock without regional data.",
+    "id": "UX-S04"
+  },
+  {
+    "title": "Real estate: no catalog",
+    "niche": "real_estate",
+    "model": "information",
+    "job": "Request a property search",
+    "alternative_a": [
+      "Buy, rent, or sell",
+      "Areas and expertise",
+      "How properties are selected",
+      "Client brief",
+      "Contact details"
+    ],
+    "alternative_b": [
+      "Agent positioning",
+      "Case studies",
+      "Services and terms",
+      "Describe requirements",
+      "Contact details"
+    ],
+    "why": "A qualified inquiry and trust are the main goals; invented listings do not support them.",
+    "avoid": "Do not show empty filters or present sold properties as available.",
+    "id": "UX-S05"
+  },
+  {
+    "title": "Real estate: catalog",
+    "niche": "real_estate",
+    "model": "catalog",
+    "job": "Find an available property",
+    "alternative_a": [
+      "Buy or rent",
+      "Geography",
+      "Filters",
+      "Cards with property attributes",
+      "Property inquiry"
+    ],
+    "alternative_b": [
+      "Choose an area",
+      "Map",
+      "Properties",
+      "Comparison",
+      "Arrange a viewing"
+    ],
+    "why": "Comparison by price, floor area, and address depends on a current inventory.",
+    "avoid": "Do not promise availability without synchronized data and an update date.",
+    "id": "UX-S06"
+  },
+  {
+    "title": "Travel: advisor-led",
+    "niche": "tourism",
+    "model": "information",
+    "job": "Plan a trip",
+    "alternative_a": [
+      "What we can arrange",
+      "Destinations",
+      "How planning is agreed",
+      "Real case studies",
+      "Travel preferences form"
+    ],
+    "alternative_b": [
+      "Inspiring destinations",
+      "Who it is for",
+      "Services",
+      "Plan with an advisor",
+      "Terms"
+    ],
+    "why": "The service sells itinerary-planning expertise rather than a fixed package.",
+    "avoid": "Do not publish invented departure dates or final prices.",
+    "id": "UX-S07"
+  },
+  {
+    "title": "Travel: ready-made tours",
+    "niche": "tourism",
+    "model": "catalog",
+    "job": "Choose a tour",
+    "alternative_a": [
+      "Destination and dates",
+      "Tour list",
+      "Itinerary and inclusions",
+      "Availability",
+      "Booking"
+    ],
+    "alternative_b": [
+      "Popular trips",
+      "Duration filter",
+      "Price cards",
+      "Detailed itinerary",
+      "Payment"
+    ],
+    "why": "The tours are standardized enough to compare.",
+    "avoid": "Do not present an example itinerary as a guaranteed available product.",
+    "id": "UX-S08"
+  },
+  {
+    "title": "B2B: catalog with prices on request",
+    "niche": "catalogs",
+    "model": "hybrid",
+    "job": "Send a request for quotation",
+    "alternative_a": [
+      "Categories",
+      "Technical specifications",
+      "Minimum order quantity",
+      "Product detail",
+      "Product-specific inquiry"
+    ],
+    "alternative_b": [
+      "Industries and needs",
+      "Products",
+      "Manufacturing capabilities",
+      "Documents",
+      "Request for quotation"
+    ],
+    "why": "The product can be standardized while its commercial quotation is tailored.",
+    "avoid": "Do not use a cart when online pricing is unavailable.",
+    "id": "UX-S09"
+  },
+  {
+    "title": "B2B: company website and catalog",
+    "niche": "catalogs",
+    "model": "hybrid",
+    "job": "Choose a journey",
+    "alternative_a": [
+      "Homepage: capabilities with Catalog and Partnership entry points",
+      "Two separate journeys"
+    ],
+    "alternative_b": [
+      "Homepage: applications by industry",
+      "Product catalog",
+      "Services and manufacturing",
+      "Inquiry"
+    ],
+    "why": "Company information and the assortment serve different tasks but can share branding and navigation.",
+    "avoid": "Do not create two isolated websites without links or consistent company information.",
+    "id": "UX-S10"
+  },
+  {
+    "title": "eSIM: consumer plans",
+    "niche": "esim",
+    "model": "catalog",
+    "job": "Buy mobile data",
+    "alternative_a": [
+      "Country",
+      "Packages by data allowance and duration",
+      "Networks and conditions",
+      "Compatibility",
+      "Payment",
+      "Installation"
+    ],
+    "alternative_b": [
+      "Country search",
+      "Popular destinations",
+      "Plans",
+      "How to install",
+      "Payment"
+    ],
+    "why": "Geography and plan parameters determine the choice.",
+    "avoid": "Do not hide fair-use policy, activation conditions, or device requirements.",
+    "id": "UX-S11"
+  },
+  {
+    "title": "eSIM: business service",
+    "niche": "esim",
+    "model": "information",
+    "job": "Discuss a business connectivity service",
+    "alternative_a": [
+      "Team roaming problem",
+      "Terms and management",
+      "Plan models",
+      "Request a demo or make contact"
+    ],
+    "alternative_b": [
+      "Solution by company type",
+      "Example onboarding process",
+      "Security and support",
+      "Consultation"
+    ],
+    "why": "The client is choosing a process and supplier responsibility rather than a single country.",
+    "avoid": "Do not make a consumer storefront the only journey for a business buyer.",
+    "id": "UX-S12"
+  }
+]

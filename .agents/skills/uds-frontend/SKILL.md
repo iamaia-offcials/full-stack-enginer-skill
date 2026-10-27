@@ -9,7 +9,7 @@ Repository, task/acceptance criteria, design/tokens, API contracts, and states.
 
 ## Procedure
 1. Find the owning components, hooks, tokens, routes, forms, and client state.
-2. Plan the smallest diff and the owner of new logic; reuse rendering, fetching, and formatters with matching semantics.
+2. Plan the smallest diff and the owner of new logic; reuse rendering, fetching, and formatters with matching semantics. For substantial new page structure, follow the [UX reference guide](../unified-development-standard/guides/UX-REFERENCE-RESEARCH.md): supported journeys and real content determine navigation/actions; an existing small edit does not require atlas research.
 3. Separate presentation and data fetching; respect client/server boundaries and input validation.
 4. Use semantic colors, responsive layout, keyboard/focus support, existing locale conventions, and loading/empty/error states applicable to the changed behavior. If transitions/gestures change, use relevant [MOT rules](../unified-development-standard/references/28-MOTION-DESIGN.md): real state owns results; support interruption/reversal, lifecycle cleanup, reduced motion and fallback. Do not add animation for a static edit.
 5. Keep server secrets and trusted authorization enforcement on the server. A client-only tool does not require a new backend unless the task needs trusted operations.

@@ -33,3 +33,15 @@ Use the relevant design/frontend profile or core-only routes. The baseline had g
 | Tiny button-label edit | Keep the existing component and relevant text/accessibility check; no new animation, dependency or full motion-guide read |
 
 Read only needed sections. Evaluate the proposal against MOT-001 through MOT-024, then implement representative cases in a disposable app when testing actual runtime behavior. A reasoning review can show missing or conflicting instructions; it is not proof of implementation correctness or a blinded model-quality improvement.
+
+## UX reference and composition scenarios
+
+- Real-estate agency with no public listings: service/criteria inquiry, no invented property search.
+- Physical grocery store versus delivery catalog: distinguish store discovery from ordering and fulfillment.
+- Bespoke Turkey trips managed by people: consultation and labeled examples, no fictional prices/departures.
+- 800-SKU wholesale catalog with a separate corporate journey: appropriate discovery and contextual RFQ without lost SKU/quantity.
+- Country-only eSIM retailer: verified country/plan/compatibility terms, no invented regions or unlimited claims.
+- Restaurant with reservations and takeaway: distinct supported journeys and truthful confirmations.
+- Tiny label change: retain the current component and relevant check, no mandatory multi-site research.
+
+For substantive reference use, test selection of a few contrasting records, separation of observations/hypotheses/proposals, and current-source verification or explicit uncertainty. Never mark a schematic as a live-site screenshot. Exercise the selector and generated gallery separately from assessing future product UX.

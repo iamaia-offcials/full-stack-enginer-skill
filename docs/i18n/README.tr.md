@@ -14,6 +14,7 @@ Ana beceri `unified-development-standard` tek başına çalışır. Ajanın ür�
 - Veritabanı kısıtları, işlemler, indeksler, şema geçişleri ve kurtarma.
 - Marka stilini dayatmadan frontend, sürdürülebilir stil yapısı, erişilebilirlik ve duyarlı arayüzler.
 - Arayüz hareketleri: bağlama göre seçim, kesme/tersine çevirme, azaltılmış hareket, çalışan alternatifler ve gerçek ilerleme.
+- UX referansları: gerçek iş modeline ve göreve göre seçilen 39 kaynak incelemesi, 12 koşullu sayfa kompozisyonu ve görsel akış/GIF içeren 27 hareket örneği.
 - Hizmetleri bağlamadan önce teknik SEO ile analitik ve piksel planlaması.
 - Git, maliyeti gözeten CI/CD, gerektiğinde konteynerler, sürüm çıkarma ve işletim.
 - Güncel dokümantasyon: mevcut özellik belgesini güncelleme; planları ve geçmişi ayırma.
@@ -22,7 +23,9 @@ Karar düzeni: **koşul → karar → gerekçe → örnek → doğrulama**. E-po
 
 ## Bağlam ve dil
 
-Kurulan tüm talimatlar **İngilizcedir**. Ajan yine de sizin dilinizde yanıt vermelidir. Giriş dosyası ilgili bölümlere yönlendirir; 29 başvuru dosyasının tamamını okumayı gerektirmez. Varsayılan olarak tek ve bağımsız bir çekirdek kurulur; 18 uzmanlık profili isteğe bağlıdır. README çevirileri kurulan becerinin dışında kalır.
+Kurulan tüm talimatlar **İngilizcedir**. Ajan yine de sizin dilinizde yanıt vermelidir. Giriş dosyası ilgili bölümlere yönlendirir; 30 başvuru dosyasının tamamını okumayı gerektirmez. Varsayılan olarak tek ve bağımsız bir çekirdek kurulur; 18 uzmanlık profili isteğe bağlıdır. README çevirileri kurulan becerinin dışında kalır. Hareket görsellerindeki özgün yazılar korunmuştur; İngilizce açıklamalar yanlarında bulunur.
+
+[Referans kılavuzu](../../.agents/skills/unified-development-standard/guides/UX-REFERENCE-RESEARCH.md), CLI ile seçici erişimi ve [çevrimdışı galeriyi](../../.agents/skills/unified-development-standard/examples/reference-atlas.html) açıklar. Klonlama/indirme sonrası HTML'yi yerel olarak açın; GitHub kaynak kodunu gösterir. UX şemaları site ekran görüntüleri değildir; kaynak tarihleri yeni doğrulama anlamına gelmez. Kanonik JSON kayıtlarını düzenleyip çekirdek klasöründen `scripts/reference_atlas.py --build-gallery` ile türetilmiş galeriyi yeniden oluşturun; `--check-gallery` farklılıkları denetler.
 
 İngilizce bazı belirteçleyicilerde daha az token kullanabilir; ancak tasarruf metne ve modele bağlıdır. Seçici okuma ve tekrarları kaldırma da önemlidir. [İnceleme sonuçları](../REVIEW.md), ölçülen metin boyutlarını ve token sayılarını gerçek çalışma davranışından ayırır.
 

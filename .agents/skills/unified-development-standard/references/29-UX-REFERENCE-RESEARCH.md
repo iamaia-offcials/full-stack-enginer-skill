@@ -1,0 +1,16 @@
+# 29. UX reference research and page architecture
+
+Use when choosing substantial page structure, journeys or niche patterns, or when a reference-based review is requested. A local UI correction does not require researching an atlas. Apply existing design, accessibility, content and security rules rather than introducing a competing design standard.
+
+- `[UXR-001] MUST` Identify the real fulfillment/transaction model per journey before choosing sections: direct purchase, catalog with negotiated quote, manager-led service, offline/informational, or an explicit combination. A homepage does not define the whole business model.
+- `[UXR-002] MUST` Base navigation, primary actions and promised content on supported operations and actual available information. Do not invent inventory, prices, dates, testimonials, credentials, regional plans or bookings to fill a reference layout.
+- `[UXR-003] MUST` Distinguish source observations, analyst hypotheses, proposed alternatives and verified outcomes. Text retrieval cannot establish exact visual placement, mobile behavior, animations or conversion performance. Mark secondary leads and unverified visual evidence clearly.
+- `[UXR-004] SHOULD` For a substantial reference-based decision, select a few contrasting cases matching the user task and operational model. Compare what can transfer and what should not; do not preload all cases or copy brand presentation.
+- `[UXR-005] MUST` When relying on a real-site observation as a current fact, verify the relevant official page/flow with available tools or mark it unverified. Preserve source URL, observation date, method and limitations; supplied notes do not constitute a fresh visit.
+- `[UXR-006] SHOULD` Include a block only if it answers a current user question, has reliable content and is supported by operations. Order by decision prerequisites, intent and risk; a generic hero/features/testimonials/FAQ sequence is not a universal template.
+- `[UXR-007] SHOULD` For a consequential new page, compare materially different structures when uncertainty warrants it, such as advisor-first versus explorer-first. Explain omissions and tradeoffs. Reusing an established pattern or making a small edit does not need multiple redesign proposals.
+- `[UXR-008] MUST` Preserve the user's context across supported journey boundaries: item/SKU or service criteria into an inquiry, company/catalog navigation, and actual next steps. Separate consultation from purchase and examples from available offers.
+- `[UXR-009] MUST` Use accessible, truthful action labels and status feedback. Apply existing frontend/SEO/analytics rules to changed routes and boundaries where relevant; do not add checkout, a subdomain, tracking or new components solely to resemble a reference.
+- `[UXR-010] MUST` Validate the proposed structure against the relevant user task and available evidence. Report unavailable browser, mobile, assistive-technology or conversion checks accurately. Popularity, a polished diagram or a screenshot does not prove usability or conversion impact.
+
+Use the [UX research guide](../guides/UX-REFERENCE-RESEARCH.md) for decision formulas, business contrasts, evidence labels and selective access to cases. General visual-system rules remain in DS; transitions remain in MOT.

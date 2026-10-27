@@ -97,3 +97,7 @@ For performance-sensitive effects, use equivalent before/after device, browser, 
 - [WCAG 2.3.3, AAA](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html): disabling nonessential interaction motion; [2.2.2, A](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html): autoplay/auto-update conditions and exceptions. These explanatory pages support applying the normative WCAG standard, not a claim of product conformance.
 
 Atlas previews, heuristic scores and this guide do not train model weights or replace project verification. Read a relevant example when useful; do not preload an entire gallery for every UI task.
+
+## Preserved visual examples
+
+The integrated `assets/motion/patterns.json` contains 27 English pattern records with original storyboards/GIFs. Select one through `python scripts/reference_atlas.py --kind motion --id bottom-sheet` (relative to core), then inspect the returned media paths when useful. Original artwork retains its captions, including Russian text. These educational samples preserve before/during/after/reduced-motion comparisons; they are not production overlays, current platform behavior or measured-FPS evidence. The [offline reference gallery](../examples/reference-atlas.html) starts with static storyboards and offers explicit GIF play/stop controls.

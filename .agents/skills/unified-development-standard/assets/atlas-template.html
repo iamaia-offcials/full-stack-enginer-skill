@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>UX and Motion Reference Atlas</title>
+<style>
+:root{font:16px/1.5 system-ui,sans-serif;color-scheme:light dark;--paper:light-dark(#fff,#181b20);--ink:light-dark(#17212b,#e5e9ef);--line:light-dark(#ccd3db,#454e59);--accent:light-dark(#185b82,#8bc7ed)}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}main,header,footer{max-width:1240px;margin:auto;padding:24px}h1{font-size:clamp(28px,4vw,44px);line-height:1.12}h2,h3{line-height:1.25}a{color:var(--accent)}button,input,select{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;color:inherit;background:var(--paper)}button{cursor:pointer}button:disabled{cursor:default;opacity:.55}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.controls{display:flex;flex-wrap:wrap;gap:16px;align-items:end}.controls label{display:grid;gap:5px}.controls input{min-width:180px;max-width:100%}.notice{border-inline-start:4px solid var(--accent);padding:12px 16px;background:light-dark(#f0f5f8,#232c36)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:20px}.card{min-width:0;padding:20px;border:1px solid var(--line);border-radius:9px;overflow-wrap:anywhere}.card h2{font-size:21px}.meta{font-size:13px;color:var(--accent)}.sketch{padding:12px;border:1px dashed var(--line);font-size:13px;margin:16px 0}.sketch b,.sketch span{display:block;padding:5px 0}.schematic-label{font-size:12px;font-weight:600}.observation{padding-inline-start:20px}summary{cursor:pointer;font-weight:650}details>div{padding-top:8px}.media{width:100%;height:auto;display:block;border:1px solid var(--line)}.columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:20px}dialog{max-width:min(950px,calc(100% - 24px));max-height:90vh;overflow:auto;padding:24px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink)}dialog::backdrop{background:#0009}.dialog-head{display:flex;align-items:start;justify-content:space-between;gap:20px}footer{font-size:14px;border-top:1px solid var(--line)}[hidden]{display:none!important}@media(max-width:580px){main,header,footer{padding:18px}.controls>*{width:100%}.controls input{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<!-- Derived gallery: edit canonical JSON/template and run reference_atlas.py --build-gallery. -->
+<header>
+<p>Engineering reference library · selective browsing</p>
+<h1>Understand the decision behind the interface</h1>
+<p>39 UX studies, 12 conditional compositions and 27 educational motion examples. Transfer useful principles to your product and verify them.</p>
+<p class="notice">UX diagrams are original schematics, not screenshots of named sites. Source notes are supplied text observations or secondary leads, not fresh visual audits or conversion evidence. Motion media are preserved educational artwork, some with Russian captions; English explanations are provided alongside them.</p>
+</header>
+<main>
+<div class="controls">
+<label>Reference type<select id="kind"><option value="ux">UX case studies</option><option value="scenario">Page composition scenarios</option><option value="motion">Motion examples</option></select></label>
+<label>Sector<select id="niche"><option value="">All sectors</option></select></label>
+<label>Business model<select id="model"><option value="">All models</option><option value="catalog">Catalog / direct offer</option><option value="information">Information / assisted service</option><option value="hybrid">Hybrid</option></select></label>
+<label>Search<input id="query" type="search" placeholder="Task, name or reference ID"></label>
+<button type="button" id="compare" disabled>Compare selected (0/2)</button>
+</div>
+<p id="count" role="status" aria-live="polite"></p>
+<div id="grid" class="grid"></div>
+<noscript><p>JavaScript is needed for this optional gallery. The canonical JSON records and Python selector remain available.</p></noscript>
+</main>
+<dialog id="comparison" aria-labelledby="comparison-title">
+<div class="dialog-head"><h2 id="comparison-title">Compare transferable decisions</h2><form method="dialog"><button>Close</button></form></div>
+<div id="comparison-content" class="columns"></div>
+</dialog>
+<footer>Build source: canonical English records and atlas-template.html. Open official sources to recheck current facts. No external service or asset request is made until you open a source link. GIF playback starts only after an explicit action; use the same button to stop it.</footer>
+<script id="atlas-data" type="application/json">@@ATLAS_DATA@@</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('atlas-data').textContent);
+const $=id=>document.getElementById(id),selected=new Set();
+const labels={restaurants:'Restaurants',grocery:'Grocery',real_estate:'Real estate',tourism:'Tourism',catalogs:'Catalogs / B2B',esim:'eSIM'};
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n};
+function field(parent,label,value){if(value===undefined||value==='')return;const box=el('section');box.append(el('h3',label));if(Array.isArray(value)){const ul=el('ul');value.forEach(v=>ul.append(el('li',v)));box.append(ul)}else box.append(el('p',String(value)));parent.append(box)}
+function source(parent,label,url){try{const u=new URL(url);if(u.protocol!=='https:')return;const a=el('a',label);a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';parent.append(a)}catch{}}
+function updateCompare(){const b=$('compare');b.disabled=selected.size!==2;b.textContent=`Compare selected (${selected.size}/2)`}
+function uxDetails(parent,c){field(parent,'Supplied text observations',c.observed);field(parent,'Analyst hypothesis',c.principle);field(parent,'Alternative in another context',c.alternative);field(parent,'When not to copy',c.avoid);field(parent,'Task to test',c.testing);field(parent,'Evidence',`${c.evidence}; supplied date ${c.checked}; ${c.verification_status}; visual status: ${c.visual_status}`);source(parent,'Official page ↗',c.url);if(c.secondary){parent.append(el('p','Secondary review lead: independently verify before relying on it.'));source(parent,'Review source ↗',c.secondary)}}
+function card(record,kind){const article=el('article',undefined,'card');article.append(el('p',`${record.id} · ${labels[record.niche]||record.category||'Motion'}${record.model?' · '+record.model:''}`,'meta'));article.append(el('h2',record.name||record.title||record.id));
+ if(kind==='ux'){
+  article.append(el('p',record.context));
+  const sketch=el('div',undefined,'sketch');sketch.append(el('p','SCHEMATIC · NOT A SITE SCREENSHOT','schematic-label'));sketch.append(el('b',record.model==='catalog'?'Discovery → relevant choice → actual next action':record.model==='hybrid'?'Separate supported user journeys':'Information → fit → supported next step'));record.observed.slice(0,3).forEach(v=>sketch.append(el('span',v)));article.append(sketch);
+  const select=el('label');const input=el('input');input.type='checkbox';input.checked=selected.has(record.id);input.setAttribute('aria-label','Compare '+record.name);input.addEventListener('change',()=>{if(input.checked&&selected.size>=2){input.checked=false;$('count').textContent='Choose at most two case studies to compare.';return}input.checked?selected.add(record.id):selected.delete(record.id);updateCompare()});select.append(input,document.createTextNode(' Compare this case'));article.append(select);
+  const details=el('details');details.append(el('summary','Read evidence and alternatives'));const content=el('div');uxDetails(content,record);details.append(content);article.append(details);
+ }else if(kind==='scenario'){
+  article.append(el('p',record.job));const columns=el('div',undefined,'columns');field(columns,'A · first composition',record.alternative_a);field(columns,'B · alternative composition',record.alternative_b);article.append(columns);field(article,'Conditional rationale',record.why);field(article,'Avoid',record.avoid);article.append(el('p','Hypothetical compositions, not copies or proven conversion winners.','notice'));
+ }else{
+  const image=el('img');image.src='../assets/motion/'+record.storyboard;image.alt=(record.title||record.id)+' — educational before/during/after/reduced-motion storyboard';image.loading='lazy';image.className='media';article.append(image);
+  const play=el('button','Play educational GIF');play.type='button';play.setAttribute('aria-pressed','false');play.addEventListener('click',()=>{const active=play.getAttribute('aria-pressed')==='true';image.src='../assets/motion/'+(active?record.storyboard:record.animation);play.setAttribute('aria-pressed',String(!active));play.textContent=active?'Play educational GIF':'Stop GIF and show storyboard'});article.append(play);
+  const details=el('details');details.append(el('summary','Read implementation context'));const content=el('div');for(const [key,label] of [['trigger','Trigger'],['intent','Purpose'],['when','Use when'],['avoid','Avoid'],['implementation','Technique'],['a11y','Accessibility'],['reduced_motion','Reduced motion'],['recipe','Implementation note'],['media_caveat','Educational limitations']])field(content,label,record[key]);details.append(content);article.append(details);
+ }
+ return article;
+}
+function render(){const kind=$('kind').value,q=$('query').value.trim().toLocaleLowerCase(),niche=$('niche').value,model=$('model').value;const rows=data[kind].filter(r=>(!niche||r.niche===niche)&&(!model||r.model===model)&&(!q||JSON.stringify(r).toLocaleLowerCase().includes(q)));$('grid').replaceChildren(...rows.map(r=>card(r,kind)));$('count').textContent=`${rows.length} matching references. No current website audit or outcome measurement is implied.`;updateCompare()}
+for(const [key,label] of Object.entries(labels)){const o=el('option',label);o.value=key;$('niche').append(o)}
+$('kind').addEventListener('change',()=>{const motion=$('kind').value==='motion';$('niche').disabled=motion;$('model').disabled=motion;if(motion){$('niche').value='';$('model').value=''}render()});for(const id of ['niche','model'])$(id).addEventListener('change',render);$('query').addEventListener('input',render);
+$('compare').addEventListener('click',()=>{const rows=data.ux.filter(r=>selected.has(r.id));const content=$('comparison-content');content.replaceChildren();for(const c of rows){const section=el('section');section.append(el('h2',c.name));uxDetails(section,c);content.append(section)}$('comparison').showModal()});
+render();
+</script>
+</body>
+</html>

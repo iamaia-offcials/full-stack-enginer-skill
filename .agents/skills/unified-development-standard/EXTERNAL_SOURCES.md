@@ -9,6 +9,9 @@ This is a source catalog, not a copy of the specifications or a claim that every
 | Google Material | https://m3.material.io/ | Design system and adaptive interfaces |
 | Microsoft Fluent 2 | https://fluent2.microsoft.design/ | Design system and tokens |
 | WCAG 2.2 | https://www.w3.org/TR/WCAG22/ | Testable accessibility standard |
+| User needs and content | https://service-manual.ons.gov.uk/content/writing-for-users/user-needs | Evidence-based user needs and content sketches |
+| Reading and scanning | https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/ | Context-dependent reading patterns, not a universal layout template |
+| Product-list comparison | https://baymard.com/research-articles/product-listing-information | Research on relevant product-list information, not proof of any named site's conversion |
 | Motion and interaction | https://fluent2.microsoft.design/motion | Purpose, spatial relationships and contextual timing; not universal brand presets |
 | Interaction animation | https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html | SC 2.3.3 AAA; explanation of disabling nonessential interaction motion |
 | Autoplay and updates | https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html | SC 2.2.2 A, including conditions and exceptions |

@@ -14,6 +14,7 @@ The main skill, `unified-development-standard`, works on its own. It helps an ag
 - Database constraints, transactions, indexes, migrations and recovery.
 - Frontend, maintainable styles, accessibility and responsive interfaces without prescribing a brand.
 - UI motion: contextual pattern selection, interruption/reversal, reduced motion, usable fallbacks and truthful progress.
+- UX reference literacy: 39 supplied website studies, 12 conditional page compositions and 27 motion examples with storyboards/GIFs, selected by task and actual business model.
 - Technical SEO and planning analytics/pixels before connecting services.
 - Git, cost-aware CI/CD, containers when appropriate, releases and operations.
 - Living documentation: update the current feature document; distinguish plans and history.
@@ -22,7 +23,9 @@ Decision pattern: **condition → decision → reason → example → verificati
 
 ## Context and language
 
-All installed instructions are in **English**. Agents should still answer in your language. The entrypoint routes to the relevant sections; it does not require reading all 29 references. One self-contained core is installed by default; 18 specialized profiles are optional. README translations stay outside the installed skill.
+All installed instructions are in **English**. Agents should still answer in your language. The entrypoint routes to the relevant sections; it does not require reading all 30 references. One self-contained core is installed by default; 18 specialized profiles are optional. README translations stay outside the installed skill. Preserved motion artwork retains its original captions; English explanations accompany it.
+
+The [reference guide](.agents/skills/unified-development-standard/guides/UX-REFERENCE-RESEARCH.md) explains selective CLI lookup and the [offline gallery](.agents/skills/unified-development-standard/examples/reference-atlas.html). Open the HTML locally after cloning/downloading; GitHub's file view shows source code. UX diagrams are schematics, not live-site screenshots. Supplied observation dates are not fresh verification. Edit canonical JSON records and run `scripts/reference_atlas.py --build-gallery` from the core folder to regenerate the derived gallery; use `--check-gallery` to detect drift.
 
 English can use fewer tokens with some tokenizers, but savings depend on the text and model. Selective reading and removing duplication matter as well. [Review results](docs/REVIEW.md) distinguish measured text sizes/token counts from actual runtime behavior.
 

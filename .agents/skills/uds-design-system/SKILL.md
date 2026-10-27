@@ -8,7 +8,7 @@ description: "Use when designing or auditing UI in code, creating design tokens 
 Existing repository/screenshots where available, CSS/components/tokens, requirements, visual references, target devices, and supported themes. External design-editor mockups are not a prerequisite.
 
 ## Procedure
-1. Inspect components, shared styles, tokens, routes, and actual UI states. Respect an established visual system.
+1. Inspect components, shared styles, tokens, routes, and actual UI states. Respect an established visual system. When choosing substantial page architecture or researching examples, use [UX research](../unified-development-standard/guides/UX-REFERENCE-RESEARCH.md) to distinguish the real transaction model, user questions and evidence; inspect a few relevant cases, not the entire atlas.
 2. Define the relevant visual contract: typography, semantic colors, spacing, radius, elevation, motion, supported themes, and responsive behavior. For motion decisions, read only relevant [MOT rules](../unified-development-standard/references/28-MOTION-DESIGN.md) and the [decision guide](../unified-development-standard/guides/MOTION-DECISIONS.md) when needed; choose by task, repetition and spatial meaning, including no motion. Reuse an established pattern for simple cases.
 3. Implement working UI in HTML/CSS/TSX/components. Use a local demonstration page or existing Storybook when useful.
 4. Consolidate duplicated components/CSS values by shared meaning; avoid giant components combining unrelated cases.

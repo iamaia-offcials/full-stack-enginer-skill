@@ -27,6 +27,7 @@ Apply engineering decision rules to the requested scope. This core works alone; 
 | Trust boundaries, access, input, privacy | [Security](references/07-SECURITY-PRIVACY.md) |
 | Frontend behavior and components | [Frontend](references/08-FRONTEND.md) |
 | Styles, tokens, interface system | [Design system](references/09-DESIGN-SYSTEM.md) |
+| Page structure, business journeys, real-world UX references | [UX research](references/29-UX-REFERENCE-RESEARCH.md); select examples only when useful |
 | UI motion, gestures, transition behavior | [Motion rules](references/28-MOTION-DESIGN.md); read only for affected interactions |
 | Keyboard, semantics, assistive technology | [Accessibility](references/10-ACCESSIBILITY.md) |
 | Public websites, SEO, analytics/pixels | [SEO and analytics](guides/SEO-ANALYTICS-PLANNING.md) |

@@ -10,3 +10,4 @@ Thumbs.db
 
 # Local input bundle; integrated motion rules live in the core skill.
 /motion-atlas-v3.0.0/
+/ux-realworld-atlas-v2/

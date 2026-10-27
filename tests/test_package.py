@@ -28,6 +28,10 @@ class PackageTests(unittest.TestCase):
                 self.assertIn("unified-development-standard/guides/LIVING-DOCUMENTATION.md", names)
                 self.assertIn("unified-development-standard/references/28-MOTION-DESIGN.md", names)
                 self.assertIn("unified-development-standard/guides/MOTION-DECISIONS.md", names)
+                self.assertIn("unified-development-standard/assets/ux/cases.json", names)
+                self.assertIn("unified-development-standard/assets/motion/storyboards/dialog.png", names)
+                self.assertIn("unified-development-standard/examples/reference-atlas.html", names)
+                self.assertLess(sum(i.file_size for i in z.infolist()), 10 * 1024 * 1024)
                 self.assertFalse(any("legacy" in n or "__pycache__" in n for n in names))
                 self.assertFalse(any("/README" in n or "/i18n/" in n for n in names),
                                  "Human README translations must stay outside the skill payload")
