@@ -1,0 +1,31 @@
+# EXAMPLE ONLY — NOT DEPLOY-READY. Check platform and secret management.
+services:
+  app:
+    image: ghcr.io/ORG/APP@sha256:<EXACT_IMAGE_DIGEST>
+    init: true
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    env_file:
+      - .env.production  # PROVISION OUTSIDE GIT; protect file permissions
+    expose:
+      - '3000'
+    # Run with nonroot UID compatible with read_only filesystem and volume ownership.
+    user: '<APP_NON_ROOT_UID>:<APP_NON_ROOT_GID>'
+    healthcheck:
+      test: ["CMD", "<AVAILABLE_HEALTHCHECK_BINARY>", "<APP_LOCAL_READINESS_URL>"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - private
+    # CPU/RAM resource limits depend on platform/Compose version; test explicitly.
+networks:
+  private:
+    internal: true
+# Reverse proxy/ingress connects via an explicitly designed shared network.

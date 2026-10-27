@@ -1,0 +1,36 @@
+# SEO and analytics: planning through verification
+
+Use when creating or substantially changing a website, or planning product measurement. Start with the site's purpose and existing decisions. Consider technical SEO early when organic search matters or remains a plausible requirement; explicitly non-indexable applications and private pages do not need an SEO project. Mark measurement N/A when it is unnecessary. Do not activate third-party services or data transfers merely because they are possible.
+
+## 1. SEO: purpose, foundations, and promotion
+
+**Formula:** site goal and audience → search intent and page map → indexable/private URLs and rendering → content model and technical requirements → publication and verification → observation and improvement. For an existing site, first inspect current URLs, content, indexing, and accessible data.
+
+**Planning:** record regions/languages, page types and purpose, expected search journeys, internal links, content update frequency, owner, and measurement. For a new site without evidence, state hypotheses instead of inventing search volumes or rankings. Conduct detailed demand research when promotion is requested or research is necessary for design; a generic standard cannot replace the actual business and audience.
+
+**Code and infrastructure:** for relevant page types, plan meaningful URLs, SSR/SSG/CSR based on content availability, correct HTTP statuses, crawlable links, unique editable titles/descriptions and canonical URLs, consistent robots/noindex and sitemaps where applicable, correct lang/hreflang for locales, structured data matching visible content, and appropriate image alt text, responsiveness, and performance. Give metadata an owner in the CMS or data model; avoid conflicting tags. Protect private and staging pages with access controls, not robots.txt alone. Do not require sitemaps, hreflang, or structured data when irrelevant. Verify HTTP/HTML and rendered output where needed. Search-service evidence, not a local build, confirms actual indexing.
+
+**Promotion:** audience/query research, useful accurate content and updates, reputation and external mentions, analysis, and iteration are a separate process. Structure and a CMS can support them; code and metadata cannot guarantee rankings, indexing, or traffic. Do not place links, create campaigns, or change external accounts without authorization.
+
+**Example:** for a public service catalog, plan service pages, regions, and editor-managed data. Use meaningful routes and distinct headings and metadata from one source. Verify HTTP, links, any applicable sitemap, and exclusion of the private dashboard from indexing. Assess editorial work and actual search visibility separately; report unavailable Search Console access.
+
+## 2. Measurement and pixel planning
+
+**Formula:** business goal → question and metric → event with a precise trigger → allowed parameters and source of truth → recipient/purpose → consent and constraints → integration and verification. Do not measure every click by default. Define ownership, data users, accuracy needs, budget/performance constraints, and test/staging/production environments.
+
+Before relevant architecture decisions, identify known or potential needs: product analytics, advertising pixels/conversions, search analytics, A/B tests, and server events. Use `goal | event and trigger | client/server source | allowed parameters | recipient/owner | basis/consent category | environment | verification`. When a provider or ID is unknown, record `undecided`. Prepare only a stable event contract or integration point justified by current scope. Do not invent IDs, create accounts, load SDKs/pixels, or simulate a working integration.
+
+**Example:** `lead_submitted` means the server confirmed successful submission, not that someone clicked a button. Parameters might include the event name, a safe form type, and an event ID when justified; exclude email, phone, message text, and tokens. Address success/failure, resubmission, SPA navigation, SDK failure, and consent states. If both browser and server report an outcome, define authority and deduplication using the chosen provider's documentation. Do not claim exactly-once delivery without a verified implementation. Send events only for the permitted settings and purposes.
+
+**Integration architecture:** locate the existing owner and configuration first. A shared typed event/adapter layer may help several real integrations; one simple counter does not justify a platform. Distinguish public IDs from secret tokens stored on the server, and separate environment configuration and data. Sandbox/test events must not pollute production reports. Restrict tag management and access; document ownership and changes. Account for third-party JavaScript in CSP, performance, and resilience: analytics failure must not block the main flow.
+
+**Privacy:** establish applicable jurisdictions, purpose, recipients, retention, and legal basis without making universal legal claims. Provide consent categories and change/withdrawal mechanisms where required. Do not load optional tags or transfer data before permitted activation when project policy or applicable requirements prohibit it. For Google Consent Mode, distinguish basic and advanced modes: advanced mode can send cookieless pings even when consent is denied, so it does not mean zero data transfer. Set defaults before events and inspect network behavior; other tags may need separate controls. Keep personal data, tokens, and sensitive values out of analytics parameters, URLs, titles, and logs; apply project, service, and legal constraints to identifiers and permitted data. Hashing alone does not guarantee anonymity.
+
+**Verification:** inspect real payloads and network requests before a choice, after consent, after denial, and after withdrawal. Reloads and navigation must preserve the choice. Check blocked recipients, correct categories, and absence of prohibited personal data. Confirm that blocked tags/SDKs do not break the product flow and that environments and counters are correct. For SPAs, choose one page-view mechanism and check duplicates, including the provider's automatic and history events. Check conversion success/failure, retries, and browser/server duplicates against the contract. Without access to provider tools, report unverified results and do not claim production measurement works.
+
+## Primary technical references
+
+- [Google Search: JavaScript and indexing](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics), [helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
+- [Google: consent mode](https://developers.google.com/tag-platform/security/concepts/consent-mode), [consent setup](https://developers.google.com/tag-platform/security/guides/consent), [personal data in Analytics](https://support.google.com/analytics/answer/6366371?hl=en), [SPA page views](https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications), [duplicate page views](https://developers.google.com/analytics/devguides/collection/ga4/views).
+
+These are technical references, not universal legal rules. Verify current provider and market requirements for the project.

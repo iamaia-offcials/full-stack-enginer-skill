@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+.uds-install.json
+.uds-install.lock
+.uds-backups/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+# EXAMPLE ONLY — NOT DEPLOY-READY. Copy to .github/workflows/ci.yml after adapting.
+# Replace ALL <...> placeholders; use official full 40-char action commit SHAs,
+# review action authors; check currently supported Node stable/LTS and scripts.
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@<PIN_CHECKOUT_FULL_COMMIT_SHA>
+        # Set persist-credentials false unless push access needed.
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@<PIN_SETUP_NODE_FULL_COMMIT_SHA>
+        with:
+          node-version: <SUPPORTED_STABLE_VERSION>
+          cache: npm
+      - run: npm ci
+      - run: npm run lint --if-present
+      - run: npm run typecheck --if-present
+      - run: npm run test:ci
+      - run: npm run build
+# Production registry push / deploy are a SEPARATE trusted workflow, never PR job.
+# Do not use production secrets on untrusted pull requests.

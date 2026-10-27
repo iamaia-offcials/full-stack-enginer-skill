@@ -1,0 +1,30 @@
+prompt,expected_primary,should_not_activate,expected_artifact
+Plan an MVP and acceptance criteria,uds-requirements-planning,uds-design-system,PRD/MVP scope and acceptance criteria
+Compare target users' needs with the market,uds-product-discovery,uds-backend,Research brief with sources
+Choose module boundaries and document an ADR,uds-architecture,uds-design-system,Ownership map and ADR
+"Review light/dark themes, tokens, and cards",uds-design-system,uds-backend,Component specification and UI findings
+Fix page loading and the empty state,uds-frontend,uds-git-cicd,Diff and relevant UI state checks
+Add an API endpoint with access validation,uds-backend,uds-design-system,Endpoint and tests
+Plan a table migration and indexes,uds-data,uds-frontend,Migration and compatibility plan
+Find duplicate business logic in this PR,uds-code-review,uds-product-discovery,Code findings with file references
+Create a test plan and check regressions,uds-testing,uds-product-discovery,Test matrix and evidence
+Threat-model authorization,uds-security,uds-design-system,Threat model
+"Configure a workflow, Docker image, and rollback",uds-git-cicd,uds-design-system,CI/CD flow and runbook
+Configure alerts and a backup restoration process,uds-operations,uds-product-discovery,Runbook and restoration verification
+Audit the entire repository,uds-project-audit,uds-product-discovery,Audit findings with evidence
+Define team engineering standards from idea to release,unified-development-standard,uds-code-review,Cross-stage standards overview
+Rename a button label on a screen,uds-frontend,uds-project-audit,Minimal UI diff
+Explain DRY without analyzing a project,none,uds-code-review,Concept explanation without skill invocation
+Hello!,none,unified-development-standard,Greeting without skill invocation
+What color is indigo?,none,uds-design-system,Factual answer without a development workflow
+Create a responsive website catalog with SSR and correct routes,uds-web-development,uds-mobile-development,Route map and browser checks
+Fix canonical and hreflang on a public multilingual site,uds-technical-seo,uds-mobile-development,SEO URL inventory and fixes
+Improve page LCP and INP using RUM data,uds-performance-optimization,uds-product-discovery,Before/after evidence
+Investigate Android scrolling jank on a physical device,uds-mobile-development,uds-technical-seo,Mobile performance evidence and device matrix
+Upgrade Next.js and TypeScript to supported stable versions without regressions,uds-dependency-upgrades,uds-product-discovery,Upgrade plan and checks
+Create light and dark themes directly in CSS and components,uds-design-system,uds-technical-seo,Tokens and components
+Review SEO for a private Telegram Mini App with no public pages,uds-web-development,uds-technical-seo,SEO marked N/A; applicable app route/security checks
+Add offline support to a mobile web PWA,uds-web-development,uds-technical-seo,PWA cache policy and checks
+Create a family budget spreadsheet,none,unified-development-standard,Outside software development scope
+How do I use the Figma editor to make a logo?,none,uds-design-system,Outside code-first development scope
+Remove duplicate hooks in an existing frontend,uds-code-review,uds-performance-optimization,Evidence and minimal patch
