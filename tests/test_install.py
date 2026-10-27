@@ -46,6 +46,8 @@ class InstallTests(unittest.TestCase):
         skills = self.repo / ".agents/skills"
         self.assertEqual([p.name for p in skills.iterdir()], [CORE])
         self.assertTrue((skills / CORE / "guides/LIVING-DOCUMENTATION.md").is_file())
+        self.assertTrue((skills / CORE / "references/28-MOTION-DESIGN.md").is_file())
+        self.assertTrue((skills / CORE / "guides/MOTION-DECISIONS.md").is_file())
 
     def test_native_project_destinations(self):
         for agent, folder in [("codex", ".agents"), ("gemini", ".gemini"),

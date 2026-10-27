@@ -13,6 +13,7 @@ La habilidad principal, `unified-development-standard`, funciona por sí sola. A
 - Validación, autorización, secretos y aplicación de invariantes de negocio en un entorno de confianza.
 - Restricciones de base de datos, transacciones, índices, migraciones y recuperación.
 - Frontend, estilos mantenibles, accesibilidad e interfaces adaptables sin imponer una identidad visual.
+- Animación de interfaces: selección según el contexto, interrupción e inversión, movimiento reducido, alternativas funcionales y progreso veraz.
 - SEO técnico y planificación de analítica/píxeles antes de conectar servicios.
 - Git, CI/CD que tiene en cuenta los costes, contenedores cuando corresponda, versiones y operaciones.
 - Documentación viva: actualizar el documento actual de la funcionalidad y distinguir los planes del historial.
@@ -21,7 +22,7 @@ Patrón de decisión: **condición → decisión → motivo → ejemplo → veri
 
 ## Contexto e idioma
 
-Todas las instrucciones instaladas están en **inglés**. Los agentes deben seguir respondiendo en tu idioma. El punto de entrada dirige a las secciones pertinentes; no exige leer las 28 referencias. Se instala por defecto un núcleo autónomo; los 18 perfiles especializados son opcionales. Las traducciones del README quedan fuera de la habilidad instalada.
+Todas las instrucciones instaladas están en **inglés**. Los agentes deben seguir respondiendo en tu idioma. El punto de entrada dirige a las secciones pertinentes; no exige leer las 29 referencias. Se instala por defecto un núcleo autónomo; los 18 perfiles especializados son opcionales. Las traducciones del README quedan fuera de la habilidad instalada.
 
 El inglés puede consumir menos tokens con algunos tokenizadores, pero el ahorro depende del texto y del modelo. La lectura selectiva y la eliminación de duplicaciones también importan. Los [resultados de la revisión](../REVIEW.md) distinguen los tamaños de texto y recuentos de tokens medidos del comportamiento real durante la ejecución.
 

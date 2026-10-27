@@ -16,6 +16,8 @@ Use SQL parameters for values; select dynamic column names or sorting from a fix
 
 **Example:** a save button reuses the existing component and tokens; the screen owns its layout. Loading/error states and duplicate-submission protection depend on the flow. A label change does not justify a new theme or complex state machine. Keep shared semantics with their owner and local exceptions near the feature. See [styles](../references/09-DESIGN-SYSTEM.md) and [accessibility](../references/10-ACCESSIBILITY.md).
 
+When motion changes, use [contextual motion decisions](MOTION-DECISIONS.md): goal/state → constraints → viable alternatives (including none) → project-specific pattern → verification. The [MOT rules](../references/28-MOTION-DESIGN.md) cover interruption, truthful progress and accessible fallbacks; a static edit does not require a motion workflow.
+
 ## Server rules
 
 **Formula:** contract → identity and authorization → business invariants → atomic change → response and audit. The order of individual checks depends on threats and the contract.

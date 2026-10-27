@@ -9,6 +9,12 @@ This is a source catalog, not a copy of the specifications or a claim that every
 | Google Material | https://m3.material.io/ | Design system and adaptive interfaces |
 | Microsoft Fluent 2 | https://fluent2.microsoft.design/ | Design system and tokens |
 | WCAG 2.2 | https://www.w3.org/TR/WCAG22/ | Testable accessibility standard |
+| Motion and interaction | https://fluent2.microsoft.design/motion | Purpose, spatial relationships and contextual timing; not universal brand presets |
+| Interaction animation | https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html | SC 2.3.3 AAA; explanation of disabling nonessential interaction motion |
+| Autoplay and updates | https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html | SC 2.2.2 A, including conditions and exceptions |
+| Animation performance | https://web.dev/articles/animations-guide | Rendering costs, explicit properties and measurement |
+| View Transitions | https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API | Verify exact feature support and progressive enhancement |
+| Web Animations API | https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API | Playback, cancellation and lifecycle control |
 | OWASP ASVS | https://asvs.owasp.org/ | Security verification; check the applicable stable version |
 | GitHub Rulesets | https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets | Branch protection and checks |
 | GitHub Actions Security | https://docs.github.com/en/code-security/tutorials/secure-your-organization/protect-against-threats | Least privilege and action commit pinning |

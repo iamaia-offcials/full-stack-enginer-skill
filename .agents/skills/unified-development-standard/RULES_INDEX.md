@@ -32,6 +32,7 @@ Canonical rules and stable IDs live in `references/`. Numbers provide navigation
 | 25 | [Dependencies, licensing, and supply-chain resilience](references/25-DEPENDENCIES.md) |
 | 26 | [Specialist skill orchestration](references/26-SKILL-ORCHESTRATION.md) |
 | 27 | [Website and web application engineering](references/27-WEB-ENGINEERING.md) |
+| 28 | [Motion design and interaction transitions](references/28-MOTION-DESIGN.md) |
 
 ## Explanations and examples
 
@@ -39,4 +40,5 @@ Canonical rules and stable IDs live in `references/`. Numbers provide navigation
 - [Product vision, MVP, and foundations](guides/PRODUCT-AND-MVP-PLANNING.md)
 - [SEO and analytics](guides/SEO-ANALYTICS-PLANNING.md)
 - [Living documentation](guides/LIVING-DOCUMENTATION.md)
+- [Contextual motion decisions](guides/MOTION-DECISIONS.md)
 - [Primary sources](EXTERNAL_SOURCES.md)

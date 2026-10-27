@@ -13,6 +13,7 @@ Ana beceri `unified-development-standard` tek başına çalışır. Ajanın ür�
 - Doğrulama, yetkilendirme, gizli bilgiler ve iş kurallarının güvenilir tarafta uygulanması.
 - Veritabanı kısıtları, işlemler, indeksler, şema geçişleri ve kurtarma.
 - Marka stilini dayatmadan frontend, sürdürülebilir stil yapısı, erişilebilirlik ve duyarlı arayüzler.
+- Arayüz hareketleri: bağlama göre seçim, kesme/tersine çevirme, azaltılmış hareket, çalışan alternatifler ve gerçek ilerleme.
 - Hizmetleri bağlamadan önce teknik SEO ile analitik ve piksel planlaması.
 - Git, maliyeti gözeten CI/CD, gerektiğinde konteynerler, sürüm çıkarma ve işletim.
 - Güncel dokümantasyon: mevcut özellik belgesini güncelleme; planları ve geçmişi ayırma.
@@ -21,7 +22,7 @@ Karar düzeni: **koşul → karar → gerekçe → örnek → doğrulama**. E-po
 
 ## Bağlam ve dil
 
-Kurulan tüm talimatlar **İngilizcedir**. Ajan yine de sizin dilinizde yanıt vermelidir. Giriş dosyası ilgili bölümlere yönlendirir; 28 başvuru dosyasının tamamını okumayı gerektirmez. Varsayılan olarak tek ve bağımsız bir çekirdek kurulur; 18 uzmanlık profili isteğe bağlıdır. README çevirileri kurulan becerinin dışında kalır.
+Kurulan tüm talimatlar **İngilizcedir**. Ajan yine de sizin dilinizde yanıt vermelidir. Giriş dosyası ilgili bölümlere yönlendirir; 29 başvuru dosyasının tamamını okumayı gerektirmez. Varsayılan olarak tek ve bağımsız bir çekirdek kurulur; 18 uzmanlık profili isteğe bağlıdır. README çevirileri kurulan becerinin dışında kalır.
 
 İngilizce bazı belirteçleyicilerde daha az token kullanabilir; ancak tasarruf metne ve modele bağlıdır. Seçici okuma ve tekrarları kaldırma da önemlidir. [İnceleme sonuçları](../REVIEW.md), ölçülen metin boyutlarını ve token sayılarını gerçek çalışma davranışından ayırır.
 

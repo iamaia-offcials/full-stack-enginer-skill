@@ -13,6 +13,7 @@ The main skill, `unified-development-standard`, works on its own. It helps an ag
 - Validation, authorization, secrets and trusted enforcement of business invariants.
 - Database constraints, transactions, indexes, migrations and recovery.
 - Frontend, maintainable styles, accessibility and responsive interfaces without prescribing a brand.
+- UI motion: contextual pattern selection, interruption/reversal, reduced motion, usable fallbacks and truthful progress.
 - Technical SEO and planning analytics/pixels before connecting services.
 - Git, cost-aware CI/CD, containers when appropriate, releases and operations.
 - Living documentation: update the current feature document; distinguish plans and history.
@@ -21,7 +22,7 @@ Decision pattern: **condition → decision → reason → example → verificati
 
 ## Context and language
 
-All installed instructions are in **English**. Agents should still answer in your language. The entrypoint routes to the relevant sections; it does not require reading all 28 references. One self-contained core is installed by default; 18 specialized profiles are optional. README translations stay outside the installed skill.
+All installed instructions are in **English**. Agents should still answer in your language. The entrypoint routes to the relevant sections; it does not require reading all 29 references. One self-contained core is installed by default; 18 specialized profiles are optional. README translations stay outside the installed skill.
 
 English can use fewer tokens with some tokenizers, but savings depend on the text and model. Selective reading and removing duplication matter as well. [Review results](docs/REVIEW.md) distinguish measured text sizes/token counts from actual runtime behavior.
 

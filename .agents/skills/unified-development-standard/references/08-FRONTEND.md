@@ -17,4 +17,8 @@
 ## Acceptable repetition
 Semantically different cards may compose shared primitives. Avoid a universal component with dozens of boolean props.
 
+## When interaction motion changes
+
+Read relevant [motion rules](28-MOTION-DESIGN.md). Business state owns the outcome; animation is its presentation. In particular, guard stale animation callbacks separately from fetch races, preserve usable focus/dismissal during exit, and keep ordinary rendering/navigation as the fallback. A static text or layout edit does not require adding animation or reading the whole motion guide.
+
 For practical patterns, read the relevant section of [decision formulas](../guides/PRACTICAL-FORMULAS.md).

@@ -28,3 +28,6 @@ Add offline support to a mobile web PWA,uds-web-development,uds-technical-seo,PW
 Create a family budget spreadsheet,none,unified-development-standard,Outside software development scope
 How do I use the Figma editor to make a logo?,none,uds-design-system,Outside code-first development scope
 Remove duplicate hooks in an existing frontend,uds-code-review,uds-performance-optimization,Evidence and minimal patch
+Choose motion for repeated sorting in a dense admin table,uds-design-system,uds-backend,Contextual motion choice including none; bounded feedback and MOT checks
+Implement an interruptible filter sheet without adding a new library,uds-frontend,uds-product-discovery,Latest-state reversal; focus and reduced-motion/fallback behavior
+Fix checkout animation that invents success after a timer,uds-frontend,uds-technical-seo,Authoritative pending/result state; no invented percentages or timer success

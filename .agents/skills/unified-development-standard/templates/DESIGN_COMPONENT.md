@@ -10,7 +10,7 @@ Use for a component requiring documentation; update existing component guidance 
 - Layout/responsiveness and content overflow:
 - Supported themes, contrast, images/blur:
 - Keyboard / screen reader / focus management:
-- Motion / reduced motion:
+- Motion when applicable: purpose/trigger, from/to/error/cancel states, properties/model/tokens, interruption, reduced motion and unsupported-API fallback:
 - API/props and design constraints:
 - Visual regression criteria:
 - Existing components to reuse / duplication to avoid:

@@ -22,6 +22,10 @@
 ```
 These values illustrate a product with two themes; they do not require adding a second theme and **do not prove WCAG compliance**. Measure actual text/background pairs, focus, validation, disabled states, and other relevant combinations against applicable criteria and exceptions.
 
+## Motion decisions
+
+For affected interactions, use [MOT rules](28-MOTION-DESIGN.md) and, when selection needs explanation, the [decision guide](../guides/MOTION-DECISIONS.md). Establish purpose, before/after states, repetition, spatial relationship and project character before choosing an effect. Preserve existing semantic motion tokens; no animation is a valid candidate. Add complex transition behavior to the current component specification rather than creating parallel motion documents. Numerical timings or Atlas scores are examples, not universal requirements.
+
 ## Visual defect audit
 Check for inconsistent tokens, one-off buttons duplicating existing components, missing supported-theme variants, excessive custom CSS, inconsistent card density, too many visual accents, unreadable blur, incorrect content order, and inconsistent icon sets.
 

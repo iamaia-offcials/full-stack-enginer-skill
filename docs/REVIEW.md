@@ -7,7 +7,7 @@ Current review: **2026-10-27**. Scope: the English instructions, public document
 | Area | Finding | Resolution |
 |---|---|---|
 | Canonical content | Duplicate catalogs, legacy copies and versioned descriptions increased context and drift | One core entrypoint, canonical references with stable IDs, optional profiles, one primary README with translations |
-| Language | Agent-facing content was mostly Russian | All 73 installed Markdown files are English, including descriptions, references, guides, templates and profiles; agents still answer in the user's language |
+| Language | Agent-facing content was mostly Russian | All installed Markdown instructions are English, including descriptions, references, guides, templates and profiles; agents still answer in the user's language |
 | Loading | Broad audit wording and ambiguous routing could cause full-corpus reads | Direct task links, relevant sections only, reuse already-read core, no recursive profile discovery; optional templates are not mandatory documents |
 | Scope | Some workflows implied backend, containers, themes, localization or a new MVP regardless of need | Apply the relevant architecture and capabilities only; distinguish a first release from hypothesis-testing MVP work |
 | CI policy | Local/manual allowance conflicted with separate mandatory pipeline wording | CI-001 governs cadence and exceptions; still verify the exact release commit/artifact |
@@ -17,11 +17,21 @@ Current review: **2026-10-27**. Scope: the English instructions, public document
 | Distribution | Documentation languages must not inflate installed context | English core ZIP excludes all public README translations; repository archive includes them |
 | Installation | Updates must preserve user edits and older copies | Managed hashes, refusal on modified/added files, explicit legacy adoption, retained backups, snapshot recheck and ordinary-error rollback |
 
-The 280 rule IDs and their MUST/SHOULD/MAY levels match the pre-translation snapshot, in the same order within each reference. Conditions and wording were clarified; retaining IDs is not a claim that semantics are entirely unchanged.
+The original 280 rule IDs and MUST/SHOULD/MAY levels match the pre-translation snapshot, in the same order within each reference. Motion integration adds MOT-001 through MOT-024, retaining the supplied family's IDs/levels, for 304 rules across 29 references. Conditions and wording were clarified; retaining IDs is not a claim that semantics are entirely unchanged.
+
+## Motion integration
+
+Reviewed the locally supplied `motion-atlas-v3.0.0` rules, decision formulas, variation/quality guidance, scenario metadata, selector and representative recipes. Integrated a canonical [motion reference](../.agents/skills/unified-development-standard/references/28-MOTION-DESIGN.md) and [decision guide](../.agents/skills/unified-development-standard/guides/MOTION-DECISIONS.md), linked from core, design/frontend instructions and the existing component template. The supplied raw bundle is preserved locally and excluded from publication; duplicated HTML/GIF galleries, example selectors and incomplete overlay recipes are not dependencies of the installed skill.
+
+The guide explains triggers versus effects/techniques, context-sensitive choices including no motion, semantic tokens, safe reversal/cancellation, true operation status, progressive enhancement, and proportional verification. Atlas utility weights remain explicitly illustrative and optional. Existing accessibility/performance rules remain their canonical owners. Relevant W3C, Fluent 2, MDN and web.dev sources were checked; previews and heuristic rankings do not establish compliance or measured performance.
+
+An independent agent evaluated five scenarios before and after integration: repeated dense-table sorting; a request-pending sheet opened/closed/reopened; card-to-detail with unsupported API/reduced motion; checkout pending/failure with proposed timer success; and an isolated label edit. Baseline rules covered broad access/state/scope concerns but lacked explicit motion selection, cancellation, snapshot/fallback and truthful-progress contracts. The revised instructions explicitly covered those gaps; the label edit retained its small scope. Two wording clarifications narrowed performance measurements to relevant effects and kept latest UI state subject to domain constraints. This was a reasoning review of the same known scenarios, not a blinded experiment or a browser/runtime implementation test. Reproducible scenarios are in the [evaluation guide](../tooling/EVALUATION_GUIDE.md).
+
+Current installed content: 75 Markdown files; the core entrypoint increased from 857 to 886 `o200k_base` tokens. Design/frontend entrypoints increased from 462/379 to 537/436 tokens. Detailed motion rules and examples remain on demand, with no new default profile or animation dependency. README translations were updated consistently. Installer/package regression checks include the new motion resources.
 
 ## Context measurement
 
-Measured with **tiktoken 0.14.0**, encoding **o200k_base**, against the local snapshot immediately before the English revision. Both snapshots were normalized from CRLF to LF before tokenization; each file was tokenized separately and totals were summed. Description measurements include the quoted description values, excluding names, wrapper schemas and runtime messages.
+The table records the **English-revision snapshots before the later motion integration**, measured with **tiktoken 0.14.0**, encoding **o200k_base**. Both snapshots were normalized from CRLF to LF before tokenization; each file was tokenized separately and totals were summed. Description measurements include the quoted description values, excluding names, wrapper schemas and runtime messages. It is not a current corpus-size claim after adding motion guidance.
 
 | Content | Before | After | Token reduction |
 |---|---:|---:|---:|
@@ -30,7 +40,7 @@ Measured with **tiktoken 0.14.0**, encoding **o200k_base**, against the local sn
 | Core entrypoint alone | 903 | 857 | 5.1% |
 | All 19 discovery descriptions | 987 | 557 | 43.6% |
 
-The core description alone is 30 tokens under the same method. On-disk skill Markdown totals 166,791 bytes. README translations are excluded. The tokenizer was used only for this measurement; it is **not** an installer dependency.
+The core description alone is 30 tokens under the same method. README translations are excluded. The tokenizer was used only for measurement; it is **not** an installer dependency.
 
 These are combined translation/editing results, not an isolated language experiment or a benchmark of Gemini/Claude tokenizers. The full corpus is not intended to be loaded for every task. Actual context use depends on discovery metadata, selected references, repeated reads, tool output and the runtime. A smaller file does not prove better behavior, and these percentages do not predict session cost.
 
@@ -58,7 +68,7 @@ Environment: **Windows, Python 3.14**.
 - Installer tests cover destinations and core dependencies, dry-run/no-op, preservation of local edits and added files, legacy adoption, source overlap, plan/apply changes, backups and rollback.
 - Package tests cover reproducibility, a single skill manifest, included license/guides, excluded README translations, file limits and archive integrity.
 - All five README translations preserve the eight executable Bash blocks from English, in order. Language navigation and local links pass validation. Arabic uses RTL prose with LTR command blocks. These checks are not independent native-speaker certification or a rendered-GitHub visual test.
-- Source comparison: 73 skill Markdown files before and after; 280 rule IDs/levels retained; no remaining Cyrillic, Arabic or Chinese prose in the installed skill files. The instruction files were also reviewed for English meaning, not just script detection.
+- Source comparison after motion integration: 75 skill Markdown files, the original 280 rule IDs/levels retained plus 24 MOT rules; no remaining Cyrillic, Arabic or Chinese prose in the installed skill files. The instruction files were also reviewed for English meaning, not just script detection.
 
 ## Limits
 
